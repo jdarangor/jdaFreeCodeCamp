@@ -1,0 +1,23 @@
+function translatePigLatin(str) {
+  let tst = str.split(""); //console.log(tst);
+  let cons = ""; 
+  for (let i=0; i<tst.length; i++){
+
+    if (i==0){
+      if (tst[0].search(/[aeiou]/)== 0){
+        //console.log(str + "way");
+        return str + "way";}
+      else cons+= tst[0]; }
+    else if (i>0){
+      if(tst[i].search(/[aeiou]/)== 0)
+        break;
+      else
+        cons+= tst[i];}
+  };
+    let test1="";
+    tst.map((item, index) =>{if(index>=cons.length)test1+=item});
+//console.log(test1 + cons+ "ay");
+  return test1 + cons+ "ay";
+}
+
+translatePigLatin("schwartz");

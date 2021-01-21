@@ -1,0 +1,11 @@
+function chunkArrayInGroups(arr, size) {
+  let rtrn = [];
+  for (let i=0; i < arr.length/size; i++){
+    
+    rtrn.push(arr.slice(i*size,(i+1)*size));
+    console.log(rtrn)
+  }
+  return rtrn;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5,6], 2);

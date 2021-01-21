@@ -1,0 +1,14 @@
+function pairElement(str) {
+  let sp = str.split(""); let rslt= [];
+  sp.map((item, index)=>{
+    if(item=="A")rslt.push(["A","T"]);
+    if(item=="T")rslt.push(["T","A"]);
+    if(item=="G")rslt.push(["G","C"]);
+    if(item=="C")rslt.push(["C","G"]);
+  })
+  //console.log(rslt);
+  return rslt;
+}
+
+pairElement("GCG");
+//pairElement("ATCGA")

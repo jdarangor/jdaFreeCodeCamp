@@ -1,0 +1,18 @@
+function fearNotLetter(str) {
+  let st = str.split("");  
+  let ini=0;
+  let abc = ("abcdefghijklmnopqrstuvwxyz").split(""); //console.log(abc);
+  let l;
+
+  ini = abc.indexOf(st[0]);
+  for(let j=0; j<=st.length; j++) {
+    if(st[j]!=abc[ini+j]){
+      l = abc[ini+j];
+      break;
+    }
+  };
+  //console.log(l);
+  return l;
+}
+
+fearNotLetter("abce");

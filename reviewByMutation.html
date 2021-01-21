@@ -1,0 +1,28 @@
+<DOCTYPE!=html>
+<html>
+<script>
+
+function mutation(arr) {
+//review letter by letter that all letters in the second array are in first.
+    //console.log(arr[1][0])
+let esta = false; //frst=0; let scnd = 0;
+for (let i=0; i < arr[1].length; i+=1){
+	//frst++;
+  for( let j=0; j < arr[0].length; j+=1){
+	
+  //  if ( toLowerCase(arr[1][i]) == toLowerCase(arr[0][j])) {
+    if ( arr[1][i] == arr[0][j]) {
+		esta = true;	
+		break; }
+		else esta = false;
+		if ( (j >=  arr[0].length-1) && !esta) return false;
+	}
+	if ( (i >=  arr[1].length-1) && esta) return true;
+}
+}
+
+mutation(["hello", "hey"]);
+
+</script>
+<h1> Review your script</h1>
+</html>

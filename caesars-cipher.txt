@@ -1,0 +1,15 @@
+function rot13(str) {
+let aRot13={N:"A", O:"B", P:"C", Q:"D", R:"E", S:"F", T:"G", U:"H", V:"I", W:"J", X:"K", Y:"L", Z:"M", A:"N", B:"O", C:"P", D:"Q", E:"R", F:"S", G:"T", H:"U", I:"V", J:"W", K:"X", L:"Y", M:"Z"};
+let rt = "N"; let arr=[]; arr=str.split("")
+  //console.log((/[A-Z]/).test(aRot13[rt]));//console.log(aRot13[rt]);
+  let sln = arr.reduce((total, item) =>{
+    if ((/[A-Z]/).test(aRot13[item]))
+    total += aRot13[item]; 
+    else 
+    total += item;
+    return total;
+  },""); console.log(sln);
+  return sln;
+}
+rot13("SERR PBQR PNZC ?.");
+//rot13("SERR CVMMN!");

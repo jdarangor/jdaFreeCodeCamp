@@ -1,0 +1,28 @@
+<DOCTYPE!=html>
+<html>
+<script>
+let mObj = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(usersObj) {
+  // Only change code below this line
+  let onln=0;
+for (let user in usersObj){
+  if (usersObj[user].online) onln+=1;
+  //console.log([user]online);
+}
+return onln;
+  // Only change code above this line
+}
+
+</script>
+</html>

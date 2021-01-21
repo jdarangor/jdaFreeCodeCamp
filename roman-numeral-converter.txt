@@ -1,0 +1,18 @@
+function convertToRoman(num) {
+    // 1,5,10,50,100,500,1000
+    let I=1,V=5,X=10,L=50,C=100,D=500,M=1000
+    let Th; let Hu; let Dc; let Un; let re, rem, rem2, sln;
+    function jdMod(n,d){if(n % d >0)return n % d; else return 0;};
+    function jdFlr(n,d){if(n/d < 1)return n; return Math.floor(n/d)};
+    function jd1_8(n,c,d,e){switch(n){case 0: return "";case 1: return e;case 2: return e+e;case 3: return e+e+e;case 4: return e+d;case 5: return d;case 6: return d+e;case 7: return d+e+e;case 8: return d+e+e+e;case 9:return e+c}};
+
+ if (num/M > 3999){ return "GT V"};
+ if (num/M >= 1){re=jdMod(num,M); Th = jdFlr(num,M);} else {Th=0; re= num;}
+ if (re/C >= 1){rem=jdMod(re,C); Hu = jdFlr(re,C);} else {Hu=0; rem= re;}
+ if (rem/X >= 1 ){rem2=jdMod(rem,X); Dc = jdFlr(rem,X);} else {Dc=0;rem2 =rem};
+ console.log(Th,"-",Hu,"-",Dc,"-",rem2);
+ if (rem2 >= 1 ){ Un = rem2;} else Un=0;
+sln=(jd1_8(Th,"Z","W","M") + jd1_8(Hu,"M","D","C") + jd1_8(Dc,"C","L","X") + jd1_8(Un,"X","V","I")); console.log(sln)
+ return sln;
+}
+convertToRoman(29);

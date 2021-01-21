@@ -1,0 +1,30 @@
+const defaultState = {
+  user: 'CamperBot',
+  status: 'offline',
+  friends: '732,982',
+  community: 'freeCodeCamp'
+};
+
+const immutableReducer = (state = defaultState, action) => {
+  switch(action.type) {
+    case 'ONLINE':
+      // Don't mutate state here or the tests will fail
+      let stt = Object.assign({},state);
+      stt.status = "online";
+      return state = stt;
+    default:
+      return state;
+  }
+};
+/*const ste = Object.assign({},defaultState)
+console.log(defaultState);
+console.log(ste.status="online");
+console.log(ste); 
+console.log(defaultState);*/
+const wakeUp = () => {
+  return {
+    type: 'ONLINE'
+  }
+};
+
+const store = Redux.createStore(immutableReducer);

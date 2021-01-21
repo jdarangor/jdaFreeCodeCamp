@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+gPhrase.match(goRegex); // Returns ["g"]
+oPhrase.match(goRegex); // Returns null
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result = quoteSample.match(alphabetRegexV2);
+let resultC = quoteSample.match(alphabetRegexV2).length;
+
+let username = "A007" // T "RegexGuru" "Oceans11" "Jo"; // F "007" "A1"
+let userCheck = /^[\D][\w][\w]\w*|^[\D][\D]\w*/; // Change this line  /^[\D][\w][\w]+ | ^[\D][\D]\w*/g;
+let resultT = userCheck.test(username);
+let resultM = username.match(userCheck);
+
+let usernameDot = "A007" // T "RegexGuru" "Oceans11" "Jo"; // F "007" "A1"
+let userCheckDot = /^[\D][\w][\w].*|^[\D][\D].*/; // Change this line  /^[\D][\w][\w]+ | ^[\D][\D]\w*/g;
+let resultTDot = userCheck.test(username);
+let resultMDot = username.match(userCheck);
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+
+</script>
+</body>
+</html>
